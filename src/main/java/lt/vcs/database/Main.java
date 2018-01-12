@@ -30,7 +30,7 @@ public class Main {
 
 
         try (
-                Connection connection = DriverManager.getConnection(URL, "sa", "sa");
+                Connection connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
                 PreparedStatement statement = connection.prepareStatement("SELECT * FROM car")
         ) {
             ResultSet resultSet = statement.executeQuery();
